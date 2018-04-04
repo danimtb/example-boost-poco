@@ -22,3 +22,6 @@ class PocoTimerConan(ConanFile):
 
     def deploy(self):
         self.copy("*timer*", src="bin", dst="bin")
+
+    def package_id(self):
+        del self.info.settings.compiler
